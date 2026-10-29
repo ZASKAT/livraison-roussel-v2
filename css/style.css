@@ -30,7 +30,8 @@ img {
 }
 
 .conteneur {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin-inline: auto;
   padding-inline: var(--espace);
 }
