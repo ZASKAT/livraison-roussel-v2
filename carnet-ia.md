@@ -4,7 +4,7 @@
 
 ### 1. Quelle est la différence entre les unités CSS em et rem ? Donne un exemple.
 
-> Je ne sais pas ce que em fais et rem est capable de s'adapter à la résolution de la page.
+> Je ne sais pas ce que `em` fait et `rem` est capable de s'adapter à la résolution de la page.
 
 #### ChatGPT
 
@@ -163,13 +163,13 @@ Si vous imbriquez des blocs en `em`, la taille est recalculée à chaque niveau 
 | em | Le parent direct | Idéal pour les composants scalaires (ex: un bouton dont le padding grandit proportionnellement à sa propre police). | Effet d'accumulation difficile à anticiper lors d'imbrications profondes. |
 | rem | La balise `<html>` | Prévisible et cohérent sur l'ensemble du site. Idéal pour la mise en page globale et la typographie. | Moins contextuel pour certains composants autonomes. |
 
-> Je comprends que em adapte sa taille a son parent/container.
+> Je comprends que `em` adapte sa taille à son parent/conteneur.
 
 ---
 
 ### 2. Comment utiliser la propriété CSS text-glow pour faire briller un titre ?
 
-> Je n'ai jamais utilisé text-glow mais je suppose qu'on l'ecrit : hx { text-glow : #xxxxxx ; }
+> Je n'ai jamais utilisé `text-glow`, mais je suppose qu'on l'écrit : `hx { text-glow: #xxxxxx; }`
 
 #### ChatGPT
 
@@ -336,7 +336,7 @@ La propriété prend généralement cette structure : `text-shadow: [décalage-X
 - **Rayon de flou (`10px`, `20px`...)** : Plus la valeur est grande, plus la lueur s'étale et devient douce.
 - **Couleur** : Idéalement choisie dans des tons vifs ou pastel lumineux sur un fond sombre pour maximiser le contraste.
 
-> J'ai appris que text-glow n'existe pas implicitement et qu'il faut passer pas bidouiller avec text-shadow.
+> J'ai appris que `text-glow` n'existe pas nativement et qu'il faut passer par `text-shadow` en bidouillant.
 
 ---
 
@@ -456,7 +456,7 @@ Ou, ce qui est recommandé, en utilisant une classe CSS dédiée :
 - **Maintenabilité :** Si vous devez modifier l'alignement de vos titres sur tout un site web, il est beaucoup plus facile de le faire dans un fichier CSS centralisé plutôt que de modifier chaque balise de présentation.
 - **Standards du Web :** Bien que certains navigateurs continuent de l'afficher par rétrocompatibilité, l'utiliser aujourd'hui produit un code non conforme aux standards actuels.
 
-> J'ai appris que la balise `<center>` est une balise html obsolète aux standards html5 comme toutes les balises de style inclut dans le html comme `<b>`
+> J'ai appris que la balise `<center>` est une balise HTML obsolète selon les standards HTML5, comme toutes les balises de style incluses dans le HTML, par exemple `<b>`.
 
 ---
 
@@ -646,7 +646,7 @@ Because `rem` always looks back to the `<html>` root element (which defaults to 
 - **Use `rem`** for almost everything—font sizes, margins, paddings, and widths—to maintain a consistent, predictable scaling system across your entire layout.
 - **Use `em`** specifically for component-level scaling where you want an element's padding, margins, or borders to scale proportionally with its own changing font size (such as making a button's padding automatically adjust if the button text is made larger or smaller).
 
-> En anglais, ChatGPT et Claude font moins de ligne et Gemini est capable d'en faire encore plus.
+> En anglais, ChatGPT et Claude font moins de lignes et Gemini est capable d'en faire encore plus.
 
 ---
 
@@ -669,7 +669,7 @@ Example from `livraison.html`:
 
 This improves accessibility because screen readers can understand the relationship between headers and cells in the table.
 
-> Scope sert à définir sur c'est une ligne ou une colonne
+> `scope` sert à définir si c'est une ligne ou une colonne.
 
 ### 2. What is aspect-ratio
 
@@ -730,7 +730,7 @@ Because 300 / 4 * 3 = 225.
 
 If you want, I can also show how it works with `img`, `video`, and `responsive cards` in real HTML/CSS examples.
 
-> Aspect ratio sert a modifier le ratio d'une image, video et cards.
+> `aspect-ratio` sert à modifier le ratio d'une image, d'une vidéo et de cartes.
 
 ### 3. What is `object-fit: cover`
 
@@ -782,7 +782,7 @@ If you want, I can also explain the difference between:
 - `none`
 - `scale-down`
 
-> Object-fit: cover remplit l'espace donné a une image dans son entièreté quitte à couper l'image.
+> `object-fit: cover` remplit tout l'espace donné à une image, quitte à la couper.
 
 ### 4. What is overflow-x
 
@@ -840,15 +840,15 @@ Related property:
 
 If you want, I can explain the difference between `overflow-x: hidden` and `overflow: hidden` too.
 
-> Overflow-x permet de faire apparaître une barre de scroll si le contenu concerné est plus grand que son conteneur.
+> `overflow-x` permet de faire apparaître une barre de défilement si le contenu est plus grand que son conteneur.
 
 ---
 
 ## Partie B2
 
-- Overflow x : scroll va montrer une barre de scroll même si ce n'est pas nécessaire
-- Aspect-ratio : 9 / 9 mettra les images en carré
-- Z-index : 0 fera disparaître l'entête en la mettant derrière tous les autres éléments qui sont de base en 1
+- `overflow-x: scroll` va montrer une barre de défilement même si ce n'est pas nécessaire.
+- `aspect-ratio: 9 / 9` mettra les images en carré.
+- `z-index: 0` fera disparaître l'en-tête en la mettant derrière tous les autres éléments, qui sont de base à 1.
 
 ---
 
@@ -859,5 +859,234 @@ Rédiger cinq règles personnelles d'usage de l'IA
 1. Vérifier les informations
 2. Ne pas divulguer de données personnelles
 3. Questionner les IA sur leurs explications
-4. Utiliser l'IA pour m'aider pas pour faire à ma place
-5. Demander a plusieurs IA pour plus de sources
+4. Utiliser l'IA pour m'aider, pas pour faire à ma place
+5. Demander à plusieurs IA pour plus de sources
+
+---
+
+## Partie E1
+
+### 1. Erreur : attribut `alt` manquant
+
+**Error: An `img` element must have an `alt` attribute, except under certain conditions. For details, consult [guidance on providing text alternatives for images](https://www.w3.org/WAI/tutorials/images/).**
+
+From line 34, column 9; to line 34, column 88
+
+```html
+<img class="bandeau__photo" src="img/camionnette.jpg" width="1200" height="800">
+```
+
+> Il faut ajouter un `alt` dans chaque balise `<img>` pour l'audio-description du site.
+
+Oui, il faut ajouter un attribut `alt`, mais demande-toi d'abord : **que voit-on sur cette image, et quelle information apporte-t-elle à la page ?**
+
+Ici, l'image est une camionnette, pas un logo. Si elle illustre simplement la livraison sans apporter d'information indispensable, un `alt` vide (`alt=""`) peut convenir. Si elle apporte une information utile, décris-la brièvement, par exemple « Camionnette de livraison de fleurs ».
+
+À toi de choisir selon le rôle de l'image dans la page.
+
+### 2. Erreurs : balise `<em>` non fermée (erreurs 2 à 7)
+
+**Error: End tag `address` seen, but there were open elements.**
+
+From line 120, column 7; to line 120, column 16
+
+```html
+/a>
+  </address>
+```
+
+**Error: Unclosed element `em`.**
+
+From line 118, column 34; to line 118, column 37
+
+```html
+sel</em>, <em>12 rue
+```
+
+**Error: Element `p` not allowed as child of element `em` in this context. (Suppressing further errors from this subtree.)**
+
+From line 121, column 7; to line 121, column 9
+
+```html
+ss>
+  <p>Boutiq
+```
+
+Contexts in which element [p](https://html.spec.whatwg.org/#the-p-element) may be used:
+
+- Where [flow content](https://html.spec.whatwg.org/#flow-content-2) is expected.
+- As a child of an [hgroup](https://html.spec.whatwg.org/#the-hgroup-element) element.
+
+Content model for element [em](https://html.spec.whatwg.org/#the-em-element): [Phrasing content](https://html.spec.whatwg.org/#phrasing-content-2).
+
+**Error: End tag `div` seen, but there were open elements.**
+
+From line 122, column 5; to line 122, column 10
+
+```html
+.</p>
+  </div>
+  </f
+```
+
+**Error: End tag `footer` seen, but there were open elements.**
+
+From line 123, column 3; to line 123, column 11
+
+```html
+</div>
+</footer>
+</bod
+```
+
+**Error: End tag for `body` seen, but there were unclosed elements.**
+
+From line 124, column 1; to line 124, column 7
+
+```html
+</footer>
+</body>
+</htm
+```
+
+> Toutes les erreurs se résolvent en fermant la balise `<em>` à la ligne 118.
+
+> En ne me donnant pas la réponse, j'ai l'impression qu'il y a une erreur ligne 118 et qu'il faut fermer la balise `<em>`.
+
+Oui, tu as bien repéré une balise `<em>` qui n'est pas fermée. Pour trouver précisément où intervenir, regarde les deux balises `<em>` dans l'élément `<address>` : chacune doit entourer uniquement le texte qu'on veut mettre en emphase. Où placerais-tu la balise de fermeture de la seconde ?
+
+### 3. Erreur : attribut `for` d'un `<label>`
+
+**Error: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.**
+
+From line 102, column 11; to line 102, column 26
+
+```html
+<label for="cp">Code p
+```
+
+> Il faut remplacer `for="cp"` par `for="code-postale"`, car un `label` se relie à un champ par son `id` et non par son `name`.
+
+> Je suis débutant en HTML et CSS, donne-moi un indice ou une question qui m'aide à trouver moi-même :
+>
+> **Error**: The value of the `for` attribute of the `label` element must be the ID of a non-hidden form control.
+>
+> From line 102, column 11; to line 102, column 26
+>
+> `<label for="cp">Code p`
+
+Indice : un `<label>` se relie à un champ grâce à son **id**, pas à son name. Compare la valeur de `for` avec les `id` des champs dans le formulaire : laquelle ne correspond pas ? (`livraison.html`)
+
+### 4. Erreur CSS : propriété inexistante
+
+***URI : style.css***
+
+| Ligne | Sélecteur | Message |
+|-------|-----------|---------|
+| 141 | `h2` | Property `colour` doesn't exist. The closest matching property name is `color` : `var(--vert)` |
+
+> Une simple faute de frappe.
+
+> Je crois qu'il y a une faute de frappe à la ligne 141, peux-tu confirmer ?
+
+Oui, tu as repéré une faute de frappe probable. Petit indice : les noms de propriétés CSS s'écrivent en anglais. Compare le nom de propriété à la ligne 141 avec celui utilisé ailleurs pour définir une couleur de texte.
+
+---
+
+## Partie E2
+
+> Je m'apprête à corriger des anomalies connues dans ce code et tu vas confirmer ou infirmer en me posant des questions (si j'ai tort) sur les erreurs que je vais te présenter.
+
+D'accord. Présente-moi chaque anomalie que tu as repérée. Je te dirai si ton diagnostic semble juste ; si quelque chose ne colle pas, je te poserai une question ou te donnerai un indice pour t'aider à vérifier par toi-même, sans corriger le code à ta place.
+
+### 1. Débordement horizontal à 375 px
+
+> 1. En 375 px, la page défile horizontalement. Le menu et le fond vert du bandeau sont coupés. Je pense qu'il faut changer le `display` de la page pour la rendre plus responsive.
+
+Tu as bien repéré le problème de **débordement horizontal**, mais changer le `display` de la page n'est probablement pas la bonne piste : le menu utilise déjà Flexbox et le bandeau utilise Grid.
+
+Indice : dans le CSS, une règle donne une **largeur fixe de 960 px** à un élément qui contient à la fois le menu et le contenu du bandeau. À 375 px, que se passe-t-il avec cet élément ? Cherche comment sa largeur pourrait s'adapter à l'écran tout en restant limitée sur les grands écrans.
+
+> Il faut rendre la largeur de `.conteneur` responsive, donc la convertir en `rem`.
+
+Pas exactement : convertir `960px` en `rem` change l'unité, mais ne rend pas la largeur responsive. Par exemple, `60rem` reste une largeur fixe par rapport à la taille de police racine et serait encore trop grande pour un écran de 375 px.
+
+Cherche plutôt une propriété qui permet à `.conteneur` de **ne pas dépasser une largeur maximale**, tout en pouvant **rétrécir quand l'écran est plus étroit**.
+
+> Il faut ajouter un `@media` qui adapte la taille au bout d'un certain `min-width`.
+
+Pas tout à fait. Une règle `@media` avec `min-width` s'applique seulement au-dessus du seuil choisi. En dessous — donc à 375 px — la largeur fixe de `.conteneur` à 960 px resterait en vigueur.
+
+Question pour vérifier ton idée : quelle règle CSS s'applique à `.conteneur` **avant que le seuil `min-width` soit atteint**, et comment pourrait-elle laisser le conteneur rétrécir sur petit écran ?
+
+> `width: 960px`
+
+Exactement : `width: 960px` impose une largeur fixe à `.conteneur`, même sur un écran de 375 px. Tu as trouvé la cause du débordement.
+
+Pour corriger tout en conservant une largeur maximale sur grand écran, quelles propriétés CSS pourraient permettre au conteneur de rétrécir sur petit écran sans dépasser 960 px ?
+
+> `display: flex` ?
+
+Pas tout à fait : `display: flex` organise les éléments **à l'intérieur** du conteneur, mais ne corrige pas sa largeur fixe.
+
+Cherche plutôt les propriétés qui permettent de dire : « le conteneur peut prendre la largeur disponible, mais ne doit pas dépasser 960 px ». Tu en connais une pour fixer une largeur maximale ?
+
+> Et si j'utilise `max-width` avec `width: 100%` ?
+
+Oui, c'est la bonne piste : `width: 100%` permet au conteneur de prendre la place disponible, tandis que `max-width` l'empêche de dépasser la largeur prévue sur grand écran. Avec `margin-inline: auto`, il restera centré.
+
+Tu peux maintenant essayer de remplacer la largeur fixe de `.conteneur` par ces deux règles, puis vérifier si le défilement horizontal disparaît à 375 px.
+
+> Est-ce que c'est bon ?
+
+Oui, c'est bien la correction attendue pour `.conteneur` : il peut maintenant prendre toute la largeur disponible sans dépasser 960 px, et `margin-inline: auto` le centre quand l'écran est plus large.
+
+Vérifie tout de même à 375 px dans le navigateur. Si un défilement horizontal persiste, il faudra chercher un autre élément qui dépasse.
+
+### 2. Camionnette écrasée ou étirée
+
+> 2. Prochain problème, la camionnette paraît écrasée ou étirée selon la largeur de l'écran. Je pense qu'il faut enlever `max-width: 100%` ligne 28 et le remplacer par `width: auto`.
+
+Pas exactement : `max-width: 100%` empêche l'image de dépasser son conteneur ; ce n'est probablement pas ce qui l'étire.
+
+Indice : la règle générale `img` donne une hauteur automatique, mais une autre règle ciblant la camionnette fixe à la fois sa largeur et sa hauteur. Peux-tu retrouver cette règle dans `.bandeau__photo` et repérer quelle déclaration force une hauteur précise ?
+
+> `height` est en pixels au lieu de %.
+
+Tu as bien repéré la hauteur fixée en pixels, mais la remplacer par un pourcentage ne garantit pas de préserver les proportions : le résultat dépendrait aussi de la hauteur de son conteneur.
+
+Indice : la règle générale `img` définit déjà une hauteur automatique. Que se passerait-il si tu retirais la hauteur fixe de `.bandeau__photo` ? Et si tu voulais garder une image de hauteur fixe, quelle propriété CSS pourrait la recadrer sans l'écraser ?
+
+> Retirer `height: 220px` ne suffit pas ?
+
+Oui, retirer `height: 220px` devrait suffire à éviter l'écrasement : la règle générale `img` définit déjà `height: auto`, donc l'image gardera ses proportions quand sa largeur s'adapte.
+
+Elle pourrait simplement être plus haute qu'avant selon la largeur de l'écran. Vérifie le rendu à plusieurs tailles.
+
+### 3. Focus invisible
+
+> 3. Prochain problème, impossible de savoir quel lien, quel champ ou quel bouton est actif. Je pense qu'il faut ajouter des `:hover`.
+
+Tu as raison de vouloir rendre l'état plus visible, mais `:hover` indique seulement qu'un élément est survolé à la souris. Ça n'aidera pas une personne qui navigue au clavier.
+
+Indice : dans ton CSS, une règle globale `*:focus` supprime le contour de focus. Que faudrait-il faire pour que le lien, le champ ou le bouton sélectionné au clavier redevienne visible ? Pense à `:focus-visible`.
+
+> J'ai juste à supprimer `*:focus`.
+
+Oui, c'est une bonne correction : supprimer `*:focus { outline: none; }` permettra au navigateur d'afficher son contour de focus par défaut sur les liens, champs et boutons.
+
+Teste en appuyant plusieurs fois sur **Tab** : tu devrais voir quel élément est sélectionné au clavier.
+
+### 5. Contraste du texte gris
+
+> 5. Prochain problème, texte gris très pâle, presque illisible. Pour les règles d'accessibilité, au moins 4,5 pour 1 pour ce texte.
+
+Oui, tu as raison : le gris `--gris-texte: #b4b9b5` est très clair. Pour du texte courant sur fond blanc, il faut viser un contraste d'au moins **4,5:1**.
+
+Indice : cette variable est utilisée pour le texte de la légende du tableau et de la note de livraison, mais aussi pour la bordure des champs. Si tu assombris `--gris-texte`, quel outil peux-tu utiliser pour vérifier le contraste, et quel autre élément visuel de la page devrais-tu contrôler après ce changement ?
+
+> J'ai changé `--gris-texte` en `#6d786d`.
+
+Oui, **`#6d786d` semble atteindre le contraste minimal de 4,5:1 sur fond blanc** — environ **4,6:1**. Le texte gris devrait donc être plus lisible et respecter le seuil pour du texte courant.
+
+Comme cette variable sert aussi à la bordure des champs, vérifie que celle-ci reste suffisamment visible.
