@@ -50,10 +50,6 @@ img {
   transform: translateY(0);
 }
 
-*:focus {
-  outline: none;
-}
-
 /* En-tête */
 
 .entete {
