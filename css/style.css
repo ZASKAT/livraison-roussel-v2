@@ -266,6 +266,34 @@ button {
   color: #ffffff;
 }
 
+.faq {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq__item {
+  padding: 0.75rem var(--espace);
+  border: 1px solid var(--vert-clair);
+  border-radius: var(--rayon);
+  color: var(--texte);
+  background: var(--fond);
+}
+
+.faq__question {
+  color: var(--vert);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq__question:focus-visible {
+  outline: 3px solid var(--rose);
+  outline-offset: 3px;
+}
+
+.faq__reponse {
+  margin-block: 0.75rem 0;
+}
+
 address {
   font-style: normal;
 }
